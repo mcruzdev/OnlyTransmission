@@ -37,3 +37,17 @@ curl --request POST \
 ```
 
 ### Creating a transmission
+
+```sh
+curl --request POST \
+  --url http://localhost:3333/transmissions \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"channelId": "${{ channelId }}",
+	"sponsor": "OnlyTransmission",
+	"state": "RJ",
+	"city": "Rio de Janeio",
+	"status": "OFF",
+	"channelName": "${{ channelName }}"
+}'
+```
