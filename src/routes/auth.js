@@ -37,7 +37,7 @@ router.post("/authenticate", async (req, res) => {
 router.post("/register", async (req, res) => {
   const { login, password } = req.body;
   const BCRYPT_SALT_ROUNDS = 10;
-
+  console.log('running')
   try {
     const alreadyExists = await User.findOne({ login });
 
